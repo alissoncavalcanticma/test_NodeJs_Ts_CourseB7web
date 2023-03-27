@@ -1,0 +1,31 @@
+{{>partials/header}}
+    <div>
+        <header>
+            <h1>Cabeçalho vindo do Fragment</h1>
+        </header>
+    </div>
+    <!-- {{#persona.show}}
+    <p>{{ persona.name }} tem {{ persona.age}} anos. Seu filho é {{ persona.child }}</p>
+    {{/persona.show}}
+    -->
+    <select>
+        {{#products}}
+            <option>{{title}} // {{price}}</option>
+        {{/products}}
+    </select>
+    <br>
+
+
+    <ul>
+    <!-- Se tiver algo a ser exibido -->
+    {{#list}}
+        <li>{{.}}</li>
+    {{/list}}
+    <!-- Se não tiver algo a ser exibido (Default) -->
+    {{^list}}
+        <p> Não existem itens a serem exibidos </p>
+    {{/list}}
+    </ul>
+</body>
+
+{{>partials/footer}}

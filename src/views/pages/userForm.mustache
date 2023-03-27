@@ -1,0 +1,13 @@
+{{>partials/header}}
+<h3>Seu nome?</h3>
+<form method="post" action="/userAction">
+    <input type="text" name="nome" placeholder="Digite aqui seu nome!"/>
+    <input type="submit" value="Enviar"/>
+</form>
+{{#users}}
+    <h1>{{fname}} // {{age}}</h1>
+{{/users}}
+{{#age}}
+    <h3>{{.}}</h3>
+{{/age}}
+{{>partials/footer}}
